@@ -7,4 +7,4 @@ Spock wins.
 
 Built using Javascript, jQuery, Sinatra, HTML, CSS and deployed to [Heroku].
 
-	[Heroku](http://salty-brushlands-7914.herokuapp.com/)
+[Heroku]: http://salty-brushlands-7914.herokuapp.com/
