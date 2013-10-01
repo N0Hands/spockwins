@@ -1,7 +1,7 @@
 body {
 	font-family: Helvetica, Verdana, sans-serif;
 	background-color: greenyellow;
-	font-size: 16pt;
+	font-size: 14pt;
 	letter-spacing: 0.03em;
 }
 
@@ -12,8 +12,7 @@ body {
 header {
 	width: 20em;
 	margin: 2em 0;
-	font-size: 0.8em;
 }
 .choices img {
-	width: 250px;
+	width: 150px;
 }
