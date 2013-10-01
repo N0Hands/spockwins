@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title>SPOCK WINS</title>
+		<link type="text/css" rel="stylesheet" href="stylesheets/application.css">
+	</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>SPOCK WINS</h1>
+			<p>The rules are similar to Rock-Paper-Scissors with the addition of a few evil lizards and the almighty Spock.</p>
+		</header>
+
+	
+		<div class="choices">
+			<img src= 'images/cutouthands/rock.jpg' data-name='rock'>
+			<img src= 'images/cutouthands/paper.jpg' data-name='paper'>
+			<img src= 'images/cutouthands/scissors.jpg' data-name='scissors'>
+			<img src= 'images/cutouthands/lizard.jpg' data-name='lizard'>
+			<img src= 'images/cutouthands/spock.jpg' data-name='Spock'>
+		</div>
+		<h3 id="result"></h3>
+		<h3 id="rescue"></h3>
+	</wrapper>
+
+	<script src ='http://code.jquery.com/jquery-2.0.3.js'></script>
+	<script src ='javascript/RockPaperScissors.js'></script>
+	<script>
+		$(document).ready(function() {
+			var player1 = new Player();
+			var player2 = new Player();
+			var game = new Game(player1, player2);
+
+			String.prototype.capitalize = function() {
+    		return this.charAt(0).toUpperCase() + this.slice(1);
+			}
+
+			$('.choices img').click(function() {
+
+				player1.picks($(this).data('name'));
+				player2.picks('Spock');
+
+				// var result = game.winner();
+				// alert(result);
+
+				$("#result").html(game.winner()[1].capitalize());
+
+				if(game.winner()[0] != player2) {
+					$("#rescue").html('...but O\'Hara intervenes. Spock wins.');
+				} else {
+					$("#rescue").html('Spock wins.');
+				}
+
+				$('#rescue').hide().delay(800).fadeIn('slow');
+
+				// This means the code looks for something called result and puts the result in there. 
+			});
+
+		// The above code gets rid of my choices and adds hi
+
+		});
+	</script>
+</body>
+</html>
